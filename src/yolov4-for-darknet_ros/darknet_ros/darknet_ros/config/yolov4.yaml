@@ -1,0 +1,39 @@
+yolo_model:
+
+  config_file:
+    name: yolov4-tiny_face.cfg
+  weight_file:
+    name:  yolov4-tiny_face_2000.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+    - person1
+    - person2
+
+# yolo_model:
+
+#   config_file:
+#     name: yolov4-tiny.cfg
+#   weight_file:
+#     name: yolov4-tiny_new1_best.weights
+#   threshold:
+#     value: 0.3
+#   detection_classes:
+#     names:
+#       - huanggua1
+#       - huanggua2
+#       - huanggua3
+#       - huanggua4
+#       - xigua5
+#       - xigua6 
+#       - xigua7
+#       - xigua8
+#       - yumi9
+#       - yumi10
+#       - yumi11
+#       - yumi12
+#       - huangguazhibei
+#       - shuidaozhibei
+#       - xiaomaizhibei
+#       - yumizhibei

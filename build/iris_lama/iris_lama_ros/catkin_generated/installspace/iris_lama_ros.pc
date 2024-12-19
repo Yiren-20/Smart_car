@@ -1,0 +1,8 @@
+prefix=/home/ucar/catkin_ws/install
+
+Name: iris_lama_ros
+Description: Description of iris_lama_ros
+Version: 1.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

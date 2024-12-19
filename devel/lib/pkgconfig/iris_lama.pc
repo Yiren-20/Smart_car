@@ -1,0 +1,8 @@
+prefix=/home/ucar/catkin_ws/devel
+
+Name: iris_lama
+Description: Description of iris_lama
+Version: 1.2.0
+Cflags: -I/home/ucar/catkin_ws/src/iris_lama/iris_lama/include
+Libs: -L${prefix}/lib -liris_lama
+Requires: 

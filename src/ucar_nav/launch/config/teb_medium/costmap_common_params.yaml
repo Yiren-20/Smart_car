@@ -1,0 +1,40 @@
+# footprint: [[0.171, -0.128], [0.171, 0.128],[-0.171, 0.128], [-0.171, -0.128]]
+#0.128
+#footprint: [ [-0.15,-0.12], [0.15,-0.12], [0.15,0.12], [-0.15,0.12] ]
+# footprint: [ [-0.15,-0.11], [0.15,-0.11], [0.15,0.11], [-0.15,0.11] ]
+
+#机器人形状几何参数
+footprint: [ [-0.13,-0.10], [0.13,-0.10], [0.13,0.10], [-0.13,0.10] ]
+#障碍物探测，检测到距离小于3m的障碍物，引入代价地图
+obstacle_range: 3.0  #4.0
+#障碍物清除，清除代价地图中3.5m以外的障碍物
+raytrace_range: 3.5   #3.5
+  # obstacle_range: 3.0  #4.0
+  # raytrace_range: 3.5   #4.5
+
+#静态层
+static_layer:
+  enabled: true
+
+#膨胀层
+inflation_layer:
+  enabled: true
+  #膨胀半径，扩展了碰撞区域以外的代价区域，使路径规划避开障碍物
+  inflation_radius: 0.08 #0.08
+  #代价比例系数，越大则价值越小
+  cost_scaling_factor: 5   #10.0
+
+#障碍物层
+obstacle_layer:
+  enabled: true
+  track_unknown_space: false
+  combination_method: 1
+
+#导航所需的传感器，用于代价地图中添加和清除障碍物
+  observation_sources: scan
+  scan: {
+    data_type: LaserScan,
+    topic: /scan,
+    marking: true,
+    clearing: true
+  }

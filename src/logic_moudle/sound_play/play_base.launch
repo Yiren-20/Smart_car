@@ -1,0 +1,6 @@
+<launch>
+  <arg name="device" default="" />
+  <!-- 跑play.py时，保留此行，注释下行 -->
+  <node name="play" pkg="sound_play" type="play_base.py" output="screen"/>
+
+</launch>
