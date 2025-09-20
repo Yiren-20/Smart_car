@@ -21,18 +21,18 @@ This framework can be applied to **autonomous cars, indoor mobile robots, and se
 
 The project is organized as follows (located under `~/Smart_car/src/`):
 
-geometry/ # Geometric utilities
-geometry2/ # Extended geometric utilities
-iris_lama/ # SLAM algorithm (LiDAR-based mapping)
-logic_moudle/ # Decision-making and logic control
-robot_localization/ # Sensor fusion & localization (EKF/UKF)
-ucar_cam/ # Camera driver & image processing
-ucar_controller/ # Motion control for the vehicle
-ucar_map/ # Map management and storage
-ucar_nav/ # Path planning & navigation
-xf_mic_asr_offline/ # Offline speech recognition (ASR)
-ydlidar/ # LiDAR driver (YDLIDAR series)
-yolov4-for-darknet_ros/ # YOLOv4 object detection integrated with ROS
+- **geometry/** – Geometric utilities  
+- **geometry2/** – Extended geometric utilities  
+- **iris_lama/** – SLAM algorithm (LiDAR-based mapping)  
+- **logic_moudle/** – Decision-making and logic control  
+- **robot_localization/** – Sensor fusion & localization (EKF/UKF)  
+- **ucar_cam/** – Camera driver & image processing  
+- **ucar_controller/** – Motion control for the vehicle  
+- **ucar_map/** – Map management and storage  
+- **ucar_nav/** – Path planning & navigation  
+- **xf_mic_asr_offline/** – Offline speech recognition (ASR)  
+- **ydlidar/** – LiDAR driver (YDLIDAR series)  
+- **yolov4-for-darknet_ros/** – YOLOv4 object detection integrated with ROS
 ---
 
 ## System Architecture
@@ -67,24 +67,22 @@ cd ~/Smart_car/
 catkin_make
 source devel/setup.bash
 
-Usage
-1. Launch SLAM Mapping
+## Usage
+
 ```bash
+# Launch SLAM Mapping
 roslaunch ucar_nav slam_gmapping.launch
-➡️ Drive the vehicle to collect LiDAR data and generate the environment map.
+# ➡️ Drive the vehicle around to collect LiDAR data and generate the environment map.
 
-2. Localization & Navigation
-```bash
+# Localization & Navigation
 roslaunch ucar_nav navigation.launch
-➡️ Set a goal in RViz, and the vehicle will plan and follow the path automatically.
+# ➡️ Open RViz, set a goal, and the vehicle will automatically plan and follow the path.
 
-3. Speech Recognition & TTS
-```bash
+# Speech Recognition & TTS
 rosrun speech_recognition asr_node.py
 rosrun speech_recognition tts_node.py
-➡️ Enable voice command recognition and voice broadcast.
+# ➡️ Enable voice command recognition and text-to-speech feedback.
 
-4. Object Detection (YOLO)
-```bash
+# Object Detection (YOLO)
 roslaunch vision_yolo yolo_detect.launch
-➡️ Detect human targets on the track and trigger corresponding actions.
+# ➡️ Detect humans or objects on the track and trigger corresponding actions.
