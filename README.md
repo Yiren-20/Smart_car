@@ -4,6 +4,8 @@
 ✅ YOLO-based object detection
 ✅ Speech interaction (ASR + TTS)
 ✅ Autonomous navigation with obstacle avoidance
+![car](https://github.com/user-attachments/assets/a54090be-903d-4c4e-a1bf-f2dc64f45efd)
+
 
 ## Introduction
 This project is developed based on the **ROS (Robot Operating System)** framework for the **National College Student Intelligent Vehicle Competition**.  
