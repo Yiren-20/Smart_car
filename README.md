@@ -60,12 +60,14 @@ sudo apt-get update
 sudo apt-get install ros-melodic-desktop-full
 sudo apt-get install ros-melodic-navigation ros-melodic-slam-gmapping
 sudo apt-get install python-rosdep python-rosinstall
+```
 
 ### 3. Initialize Workspace
 ```bash
 cd ~/Smart_car/
 catkin_make
 source devel/setup.bash
+```
 
 ## Usage
 
@@ -73,16 +75,23 @@ source devel/setup.bash
 # Launch SLAM Mapping
 roslaunch ucar_nav slam_gmapping.launch
 # ➡️ Drive the vehicle around to collect LiDAR data and generate the environment map.
+```
 
 # Localization & Navigation
+```bash
 roslaunch ucar_nav navigation.launch
 # ➡️ Open RViz, set a goal, and the vehicle will automatically plan and follow the path.
+```
 
 # Speech Recognition & TTS
+```bash
 rosrun speech_recognition asr_node.py
 rosrun speech_recognition tts_node.py
 # ➡️ Enable voice command recognition and text-to-speech feedback.
+```
 
 # Object Detection (YOLO)
+```bash
 roslaunch vision_yolo yolo_detect.launch
 # ➡️ Detect humans or objects on the track and trigger corresponding actions.
+```
